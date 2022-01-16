@@ -12,15 +12,15 @@ namespace GeneralStore.MVC.Controllers
     public class ProductController : Controller
     {
         // Link to the Db with the application DB Context 
-        private ApplicationDbContext _db = new ApplicationDbContext(); // Readonly?
+        private readonly ApplicationDbContext _db = new ApplicationDbContext(); // Readonly?
 
         // GET: Product
         public ActionResult Index()
         {
-            List<Product> productList = _db.Products.ToList();
-            List<Product> oderList = productList.OrderBy(prod => prod.Name).ToList();
-            return View(oderList);
-            //return View(_db.Products.ToList()); // why list?
+            //List<Product> productList = _db.Products.ToList();
+            //List<Product> oderList = productList.OrderBy(prod => prod.Name).ToList();
+            //return View(oderList);
+            return View(_db.Products.ToList()); // why list?
         }
 
         // GET: Product/Create

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 // Added using  ms.Build Utilities:
-using Microsoft.Build.Utilities;
+//using Microsoft.Build.Utilities
 
 namespace GeneralStore.MVC.Models
 {
