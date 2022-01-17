@@ -17,10 +17,12 @@ namespace GeneralStore.MVC.Controllers
         // GET: Product
         public ActionResult Index()
         {
-            //List<Product> productList = _db.Products.ToList();
-            //List<Product> oderList = productList.OrderBy(prod => prod.Name).ToList();
-            //return View(oderList);
-            return View(_db.Products.ToList()); // why list?
+            List<Product> productList = _db.Products.ToList();
+
+            List<Product> orderList = productList.OrderBy(prod => prod.Name).ToList();
+
+            return View(orderList);
+            //return View(_db.Products.ToList()); // why list?
         }
 
         // GET: Product/Create
